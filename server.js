@@ -1,13 +1,14 @@
 const express = require('express')
 
 const app = express()
-const PORT = 3000;
 
 
 app.get('/', (req, res) => {
     res.send('hello it is the get request')
 })
 
-app.listen(PORT, () => {
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
     console.log(`listening to ${PORT}`)
 })
