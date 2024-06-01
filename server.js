@@ -7,6 +7,10 @@ app.get('/', (req, res) => {
     res.send('hello it is the get request')
 })
 
+app.get('/docker', (req, res) => {
+    res.send('docker get req')
+})
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
